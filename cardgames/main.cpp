@@ -7,9 +7,14 @@
 //
 
 #include <iostream>
+using namespace std;
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    cout << "Choose the game you would like to play. The options are displayed below:" << endl;
+    cout << "1. Blackjack" << endl;
+    string option;
+    cin >> option;
+    
+    cout << option << endl;
     return 0;
 }
