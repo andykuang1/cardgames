@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		47B6C10621F13BCB0094A63A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 47B6C10521F13BCB0094A63A /* main.cpp */; };
+		47B6C11221F147740094A63A /* blackjack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 47B6C11021F147740094A63A /* blackjack.cpp */; };
+		47B6C11521F14A190094A63A /* deck.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 47B6C11321F14A190094A63A /* deck.cpp */; };
+		47B6C11821F14A8A0094A63A /* card.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 47B6C11621F14A8A0094A63A /* card.cpp */; };
+		47B6C11B21F154830094A63A /* playingcard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 47B6C11921F154830094A63A /* playingcard.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +29,14 @@
 /* Begin PBXFileReference section */
 		47B6C10221F13BCB0094A63A /* cardgames */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = cardgames; sourceTree = BUILT_PRODUCTS_DIR; };
 		47B6C10521F13BCB0094A63A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		47B6C11021F147740094A63A /* blackjack.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = blackjack.cpp; sourceTree = "<group>"; };
+		47B6C11121F147740094A63A /* blackjack.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = blackjack.hpp; sourceTree = "<group>"; };
+		47B6C11321F14A190094A63A /* deck.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = deck.cpp; sourceTree = "<group>"; };
+		47B6C11421F14A190094A63A /* deck.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = deck.hpp; sourceTree = "<group>"; };
+		47B6C11621F14A8A0094A63A /* card.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = card.cpp; sourceTree = "<group>"; };
+		47B6C11721F14A8A0094A63A /* card.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = card.hpp; sourceTree = "<group>"; };
+		47B6C11921F154830094A63A /* playingcard.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = playingcard.cpp; sourceTree = "<group>"; };
+		47B6C11A21F154830094A63A /* playingcard.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = playingcard.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +69,14 @@
 		47B6C10421F13BCB0094A63A /* cardgames */ = {
 			isa = PBXGroup;
 			children = (
+				47B6C11621F14A8A0094A63A /* card.cpp */,
+				47B6C11721F14A8A0094A63A /* card.hpp */,
+				47B6C11921F154830094A63A /* playingcard.cpp */,
+				47B6C11A21F154830094A63A /* playingcard.hpp */,
+				47B6C11321F14A190094A63A /* deck.cpp */,
+				47B6C11421F14A190094A63A /* deck.hpp */,
+				47B6C11021F147740094A63A /* blackjack.cpp */,
+				47B6C11121F147740094A63A /* blackjack.hpp */,
 				47B6C10521F13BCB0094A63A /* main.cpp */,
 			);
 			path = cardgames;
@@ -118,7 +138,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47B6C11221F147740094A63A /* blackjack.cpp in Sources */,
 				47B6C10621F13BCB0094A63A /* main.cpp in Sources */,
+				47B6C11521F14A190094A63A /* deck.cpp in Sources */,
+				47B6C11821F14A8A0094A63A /* card.cpp in Sources */,
+				47B6C11B21F154830094A63A /* playingcard.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
