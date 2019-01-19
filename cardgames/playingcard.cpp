@@ -35,3 +35,11 @@ PlayingCard::PlayingCard(char cardvalue, int cardsuit){
         m_value = 13;
     m_suit = cardsuit;
 }
+
+int PlayingCard::showValue(){
+    return m_value;
+}
+
+string PlayingCard::showSuit(){
+    return cardsuits[m_suit-1];
+}

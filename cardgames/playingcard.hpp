@@ -17,6 +17,8 @@ public:
     PlayingCard();
     PlayingCard(int cardvalue, int cardsuit);
     PlayingCard(char cardvalue, int cardsuit);
+    int showValue();
+    string showSuit();
     
 private:
     int m_value = 1;
