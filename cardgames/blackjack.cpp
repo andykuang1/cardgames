@@ -23,13 +23,23 @@ void showDeck(Deck<PlayingCard> deckToShow){
     }
 }
 
-int getValueWithoutA(Deck<PlayingCard> playingdeck){
+int getValueOfDeck(Deck<PlayingCard> playingdeck){
     int counter = 0;
+    int numAces = 0;
     for (int i = 0; i < playingdeck.decksize(); i++){
         int value = playingdeck.getCard(i).getValue();
         if (value > 10)
-            value = 10;
-        counter += value;
+            counter += 10;
+        else if (value == 1)
+            numAces++;
+        else
+            counter += value;
+    }
+    for (int i = 0; i < numAces; i++){
+        if (counter + 11 <= 21)
+            counter += 11;
+        else
+            counter += 1;
     }
     return counter;
 }
@@ -52,10 +62,28 @@ void Blackjack::startgame(){
     createStartingDeck();
     cout << "Hello! You have chosen Blackjack. Let's get started!" << endl;
     dealStartingHand();
-    cout << "Dealer has cards: ";
-    cout << " __ ";
-    showCard(dealer_hand, 1);
-    cout << "\nYour cards are:    ";
-    showDeck(m_hand);
-    cout << "(" + to_string(getValueWithoutA(m_hand)) + ")" << endl;;
+    playgame();
+}
+
+void Blackjack::playgame(){
+    bool playing = true;
+    //playerturn
+    while (playing){
+        cout << "Dealer has cards: ";
+        cout << " __ ";
+        showCard(dealer_hand, 1);
+        cout << "\nYour cards are:    ";
+        showDeck(m_hand);
+        int valueOfHand = getValueOfDeck(m_hand);
+        cout << "(" + to_string(valueOfHand) + ")" << endl;
+        char option;
+        cout << "Would you like to [H]it or [S]tand?" << endl;
+        cin >> option;
+        if ((option == 'H') || option == 'h')
+            m_deck.dealCard(m_hand);
+        else if ((option == 'S') || option == 's')
+            playing = false;
+    }
+    
+    //dealerturn
 }

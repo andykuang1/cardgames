@@ -21,6 +21,7 @@ public:
     
 private:
     void startgame();
+    void playgame();
     Deck<PlayingCard> m_deck;
     Deck<PlayingCard> m_hand;
     Deck<PlayingCard> dealer_hand;

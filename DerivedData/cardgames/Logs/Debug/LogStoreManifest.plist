@@ -35,6 +35,35 @@
 			<key>uniqueIdentifier</key>
 			<string>022BA217-B3E4-474C-A831-D07113093B13</string>
 		</dict>
+		<key>02806E00-1EBF-451E-80C2-D2EEF2B72C51</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>02806E00-1EBF-451E-80C2-D2EEF2B72C51.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>cardgames project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>cardgames</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug cardgames</string>
+			<key>timeStartedRecording</key>
+			<real>569720700.04899704</real>
+			<key>timeStoppedRecording</key>
+			<real>569720730.08213103</real>
+			<key>title</key>
+			<string>Debug cardgames</string>
+			<key>uniqueIdentifier</key>
+			<string>02806E00-1EBF-451E-80C2-D2EEF2B72C51</string>
+		</dict>
 		<key>054511B2-C26D-4659-83F3-2BB06D4EC01C</key>
 		<dict>
 			<key>className</key>
@@ -63,6 +92,35 @@
 			<string>Debug cardgames</string>
 			<key>uniqueIdentifier</key>
 			<string>054511B2-C26D-4659-83F3-2BB06D4EC01C</string>
+		</dict>
+		<key>0ACCCDFA-FF09-419F-9652-1A571EC3EC42</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>0ACCCDFA-FF09-419F-9652-1A571EC3EC42.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>cardgames project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>cardgames</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug cardgames</string>
+			<key>timeStartedRecording</key>
+			<real>569720672.153669</real>
+			<key>timeStoppedRecording</key>
+			<real>569720680.35700703</real>
+			<key>title</key>
+			<string>Debug cardgames</string>
+			<key>uniqueIdentifier</key>
+			<string>0ACCCDFA-FF09-419F-9652-1A571EC3EC42</string>
 		</dict>
 		<key>0BC679D1-D778-468F-9767-74F8F03C3852</key>
 		<dict>
@@ -180,6 +238,64 @@
 			<key>uniqueIdentifier</key>
 			<string>143F17D2-273E-4AF8-B542-AF5316EED558</string>
 		</dict>
+		<key>1CE3CEE8-5D2F-45A8-B6C7-3EC0FFDE87AF</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>1CE3CEE8-5D2F-45A8-B6C7-3EC0FFDE87AF.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>cardgames project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>cardgames</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug cardgames</string>
+			<key>timeStartedRecording</key>
+			<real>569720120.548316</real>
+			<key>timeStoppedRecording</key>
+			<real>569720129.31787503</real>
+			<key>title</key>
+			<string>Debug cardgames</string>
+			<key>uniqueIdentifier</key>
+			<string>1CE3CEE8-5D2F-45A8-B6C7-3EC0FFDE87AF</string>
+		</dict>
+		<key>1D4A2A02-A34B-4D0D-8A7D-410D2F09AC40</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>1D4A2A02-A34B-4D0D-8A7D-410D2F09AC40.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>cardgames project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>cardgames</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug cardgames</string>
+			<key>timeStartedRecording</key>
+			<real>569720106.18768203</real>
+			<key>timeStoppedRecording</key>
+			<real>569720119.56074297</real>
+			<key>title</key>
+			<string>Debug cardgames</string>
+			<key>uniqueIdentifier</key>
+			<string>1D4A2A02-A34B-4D0D-8A7D-410D2F09AC40</string>
+		</dict>
 		<key>24E74E43-6839-4FA3-B52E-3C6A2AEF6A9F</key>
 		<dict>
 			<key>className</key>
@@ -296,6 +412,35 @@
 			<key>uniqueIdentifier</key>
 			<string>32EE75F5-9D3C-47C4-8362-568AC4509195</string>
 		</dict>
+		<key>36965E07-B618-402B-9153-B26181E6E07C</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>36965E07-B618-402B-9153-B26181E6E07C.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>cardgames project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>cardgames</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug cardgames</string>
+			<key>timeStartedRecording</key>
+			<real>569720210.37503803</real>
+			<key>timeStoppedRecording</key>
+			<real>569720266.20712197</real>
+			<key>title</key>
+			<string>Debug cardgames</string>
+			<key>uniqueIdentifier</key>
+			<string>36965E07-B618-402B-9153-B26181E6E07C</string>
+		</dict>
 		<key>3777EB56-5816-4F82-8E92-5861772B900E</key>
 		<dict>
 			<key>className</key>
@@ -324,6 +469,35 @@
 			<string>Debug cardgames</string>
 			<key>uniqueIdentifier</key>
 			<string>3777EB56-5816-4F82-8E92-5861772B900E</string>
+		</dict>
+		<key>3B5610BF-8035-4F2C-9455-D03B43C96B01</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>3B5610BF-8035-4F2C-9455-D03B43C96B01.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>cardgames project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>cardgames</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug cardgames</string>
+			<key>timeStartedRecording</key>
+			<real>569720688.655563</real>
+			<key>timeStoppedRecording</key>
+			<real>569720694.06254995</real>
+			<key>title</key>
+			<string>Debug cardgames</string>
+			<key>uniqueIdentifier</key>
+			<string>3B5610BF-8035-4F2C-9455-D03B43C96B01</string>
 		</dict>
 		<key>4F3D36D0-3AAA-4578-990E-CCDCF8FD7FCB</key>
 		<dict>
@@ -383,6 +557,35 @@
 			<key>uniqueIdentifier</key>
 			<string>518109BD-F8A2-4AC8-932A-ADAFC5041009</string>
 		</dict>
+		<key>52EA3F7D-FB09-47F2-8766-56A951CEF314</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>52EA3F7D-FB09-47F2-8766-56A951CEF314.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>cardgames project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>cardgames</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug cardgames</string>
+			<key>timeStartedRecording</key>
+			<real>569720424.67690098</real>
+			<key>timeStoppedRecording</key>
+			<real>569720460.39668798</real>
+			<key>title</key>
+			<string>Debug cardgames</string>
+			<key>uniqueIdentifier</key>
+			<string>52EA3F7D-FB09-47F2-8766-56A951CEF314</string>
+		</dict>
 		<key>5592C6C5-2E04-41D3-AE19-A2794BEC8632</key>
 		<dict>
 			<key>className</key>
@@ -411,6 +614,35 @@
 			<string>Debug cardgames</string>
 			<key>uniqueIdentifier</key>
 			<string>5592C6C5-2E04-41D3-AE19-A2794BEC8632</string>
+		</dict>
+		<key>5D4EBEC3-4C13-4011-A40B-CDD826E53025</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>5D4EBEC3-4C13-4011-A40B-CDD826E53025.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>cardgames project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>cardgames</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug cardgames</string>
+			<key>timeStartedRecording</key>
+			<real>569719983.85923505</real>
+			<key>timeStoppedRecording</key>
+			<real>569719986.36895895</real>
+			<key>title</key>
+			<string>Debug cardgames</string>
+			<key>uniqueIdentifier</key>
+			<string>5D4EBEC3-4C13-4011-A40B-CDD826E53025</string>
 		</dict>
 		<key>5EB4BC33-114A-4EE3-B5A2-33122FB605E7</key>
 		<dict>
@@ -441,6 +673,35 @@
 			<key>uniqueIdentifier</key>
 			<string>5EB4BC33-114A-4EE3-B5A2-33122FB605E7</string>
 		</dict>
+		<key>60337049-0807-40EC-AD0A-B9DB5085E54E</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>60337049-0807-40EC-AD0A-B9DB5085E54E.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>cardgames project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>cardgames</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug cardgames</string>
+			<key>timeStartedRecording</key>
+			<real>569719939.76084101</real>
+			<key>timeStoppedRecording</key>
+			<real>569719942.22755396</real>
+			<key>title</key>
+			<string>Debug cardgames</string>
+			<key>uniqueIdentifier</key>
+			<string>60337049-0807-40EC-AD0A-B9DB5085E54E</string>
+		</dict>
 		<key>6A171D7D-E182-4549-9874-D9675A3569F7</key>
 		<dict>
 			<key>className</key>
@@ -470,6 +731,35 @@
 			<key>uniqueIdentifier</key>
 			<string>6A171D7D-E182-4549-9874-D9675A3569F7</string>
 		</dict>
+		<key>6B310EA7-6988-4DFF-9622-5FD86EA8A610</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>6B310EA7-6988-4DFF-9622-5FD86EA8A610.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>cardgames project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>cardgames</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug cardgames</string>
+			<key>timeStartedRecording</key>
+			<real>569720464.66081405</real>
+			<key>timeStoppedRecording</key>
+			<real>569720671.45195103</real>
+			<key>title</key>
+			<string>Debug cardgames</string>
+			<key>uniqueIdentifier</key>
+			<string>6B310EA7-6988-4DFF-9622-5FD86EA8A610</string>
+		</dict>
 		<key>6D47C8FC-FA81-4BBC-9C09-AFCE08D1F594</key>
 		<dict>
 			<key>className</key>
@@ -498,6 +788,64 @@
 			<string>Debug cardgames</string>
 			<key>uniqueIdentifier</key>
 			<string>6D47C8FC-FA81-4BBC-9C09-AFCE08D1F594</string>
+		</dict>
+		<key>72165529-2D37-459D-B9BD-D2CBF93EB34A</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>72165529-2D37-459D-B9BD-D2CBF93EB34A.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>cardgames project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>cardgames</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug cardgames</string>
+			<key>timeStartedRecording</key>
+			<real>569720681.51738</real>
+			<key>timeStoppedRecording</key>
+			<real>569720688.11012697</real>
+			<key>title</key>
+			<string>Debug cardgames</string>
+			<key>uniqueIdentifier</key>
+			<string>72165529-2D37-459D-B9BD-D2CBF93EB34A</string>
+		</dict>
+		<key>7705A4C4-7C1A-4C1D-B25A-94E576D67854</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>7705A4C4-7C1A-4C1D-B25A-94E576D67854.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>cardgames project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>cardgames</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug cardgames</string>
+			<key>timeStartedRecording</key>
+			<real>569720271.04818296</real>
+			<key>timeStoppedRecording</key>
+			<real>569720287.02157497</real>
+			<key>title</key>
+			<string>Debug cardgames</string>
+			<key>uniqueIdentifier</key>
+			<string>7705A4C4-7C1A-4C1D-B25A-94E576D67854</string>
 		</dict>
 		<key>7E9B3CA9-87D7-4D9E-9D50-691F345EC35C</key>
 		<dict>
@@ -556,6 +904,93 @@
 			<string>Debug cardgames</string>
 			<key>uniqueIdentifier</key>
 			<string>9046D10F-A25D-4A13-A81A-F10334396BC6</string>
+		</dict>
+		<key>9C842DD0-C4DE-4D0D-98C6-41F1CC0041D6</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>9C842DD0-C4DE-4D0D-98C6-41F1CC0041D6.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>cardgames project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>cardgames</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug cardgames</string>
+			<key>timeStartedRecording</key>
+			<real>569720156.30639899</real>
+			<key>timeStoppedRecording</key>
+			<real>569720162.78473103</real>
+			<key>title</key>
+			<string>Debug cardgames</string>
+			<key>uniqueIdentifier</key>
+			<string>9C842DD0-C4DE-4D0D-98C6-41F1CC0041D6</string>
+		</dict>
+		<key>A2BB27D3-274B-43E3-90D6-9B1BE9896EB3</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>A2BB27D3-274B-43E3-90D6-9B1BE9896EB3.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>cardgames project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>cardgames</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug cardgames</string>
+			<key>timeStartedRecording</key>
+			<real>569720017.44782698</real>
+			<key>timeStoppedRecording</key>
+			<real>569720019.66191101</real>
+			<key>title</key>
+			<string>Debug cardgames</string>
+			<key>uniqueIdentifier</key>
+			<string>A2BB27D3-274B-43E3-90D6-9B1BE9896EB3</string>
+		</dict>
+		<key>A32A425E-0934-4814-A48A-991AAB653CF5</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>A32A425E-0934-4814-A48A-991AAB653CF5.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>cardgames project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>cardgames</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug cardgames</string>
+			<key>timeStartedRecording</key>
+			<real>569719764.94789898</real>
+			<key>timeStoppedRecording</key>
+			<real>569719767.19093502</real>
+			<key>title</key>
+			<string>Debug cardgames</string>
+			<key>uniqueIdentifier</key>
+			<string>A32A425E-0934-4814-A48A-991AAB653CF5</string>
 		</dict>
 		<key>A62AF10D-224E-4906-BE8D-41251D17EE67</key>
 		<dict>
@@ -905,6 +1340,35 @@
 			<key>uniqueIdentifier</key>
 			<string>D794D12E-B2C1-41F2-851C-ED82355EFEB9</string>
 		</dict>
+		<key>D94F5EF0-9567-4736-9375-92DBF284B503</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>D94F5EF0-9567-4736-9375-92DBF284B503.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>cardgames project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>cardgames</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug cardgames</string>
+			<key>timeStartedRecording</key>
+			<real>569720094.27026796</real>
+			<key>timeStoppedRecording</key>
+			<real>569720096.30515003</real>
+			<key>title</key>
+			<string>Debug cardgames</string>
+			<key>uniqueIdentifier</key>
+			<string>D94F5EF0-9567-4736-9375-92DBF284B503</string>
+		</dict>
 		<key>DBF48164-379A-496F-91E4-573B6BFECAD2</key>
 		<dict>
 			<key>className</key>
@@ -1078,6 +1542,35 @@
 			<string>Debug cardgames</string>
 			<key>uniqueIdentifier</key>
 			<string>FC40B6CE-7A38-4A0E-9C35-38597B97416D</string>
+		</dict>
+		<key>FC5EAEDD-B9D0-4276-8FB2-C0AEF64ACFE5</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>FC5EAEDD-B9D0-4276-8FB2-C0AEF64ACFE5.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>cardgames project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>cardgames</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug cardgames</string>
+			<key>timeStartedRecording</key>
+			<real>569720694.50543296</real>
+			<key>timeStoppedRecording</key>
+			<real>569720699.86365998</real>
+			<key>title</key>
+			<string>Debug cardgames</string>
+			<key>uniqueIdentifier</key>
+			<string>FC5EAEDD-B9D0-4276-8FB2-C0AEF64ACFE5</string>
 		</dict>
 	</dict>
 </dict>
