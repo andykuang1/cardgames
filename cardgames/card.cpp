@@ -17,5 +17,9 @@ Card::Card(string cardname){
 }
 
 void Card::showCard(){
-    cout << name << endl;
+    cout << name;
+}
+
+string Card::getName(){
+    return name;
 }

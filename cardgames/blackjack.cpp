@@ -9,7 +9,6 @@
 #include "blackjack.hpp"
 
 Blackjack::Blackjack(){
-    createStartingDeck();
     startgame();
 }
 
@@ -21,7 +20,21 @@ void Blackjack::createStartingDeck(){
     }
 }
 
+void Blackjack::dealStartingHand(){
+    m_deck.shuffle();
+    m_deck.dealCard(m_hand);
+    m_deck.dealCard(dealer_hand);
+    m_deck.dealCard(m_hand);
+    m_deck.dealCard(dealer_hand);
+}
+
 void Blackjack::startgame(){
+    createStartingDeck();
     cout << "Hello! You have chosen Blackjack. Let's get started!" << endl;
-    
+    dealStartingHand();
+    cout << "Dealer has cards: ";
+    dealer_hand.showCard(1);
+    cout << " __ " << endl;
+    cout << "Your cards are:   ";
+    m_hand.showDeck();
 }

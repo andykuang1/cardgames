@@ -15,10 +15,11 @@
 class PlayingCard : public Card{
 public:
     PlayingCard();
+    PlayingCard(string cardname);
     PlayingCard(int cardvalue, int cardsuit);
     PlayingCard(char cardvalue, int cardsuit);
-    int showValue();
-    string showSuit();
+    int getValue();
+    string getSuit();
     
 private:
     int m_value = 1;
