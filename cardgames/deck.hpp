@@ -20,10 +20,15 @@ class Deck{
 public:
     Deck();
     void showTop();
+    Card getTop();
     void shuffle();
-    void insert_card(Card card);
+    void insert_card(Card cardToInsert);
     int decksize();
     void showCard(int i);
+    Card getCard(int i);
+    void dealCard(Deck& otherDeck);
+    void showDeck();
+    void showCards(int start, int end);
 private:
     vector<Card> m_deck;
 };

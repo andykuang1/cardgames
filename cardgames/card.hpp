@@ -19,6 +19,7 @@ public:
     Card();
     Card(string cardname);
     void showCard();
+    string getName();
     
 protected:
     string name;

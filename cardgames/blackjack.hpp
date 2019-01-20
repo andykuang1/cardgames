@@ -17,10 +17,13 @@ class Blackjack{
 public:
     Blackjack();
     void createStartingDeck();
+    void dealStartingHand();
     
 private:
     void startgame();
     Deck m_deck;
+    Deck m_hand;
+    Deck dealer_hand;
 };
 
 #endif /* blackjack_hpp */
