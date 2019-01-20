@@ -13,11 +13,9 @@ Blackjack::Blackjack(){
 }
 
 void Blackjack::createStartingDeck(){
-    for (int i = 1; i < 14; i++){
-        for (int j = 1; j < 5; j++){
+    for (int i = 1; i < 14; i++)
+        for (int j = 1; j < 5; j++)
             m_deck.insert_card(PlayingCard(i, j));
-        }
-    }
 }
 
 void Blackjack::dealStartingHand(){

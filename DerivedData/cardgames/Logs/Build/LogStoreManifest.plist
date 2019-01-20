@@ -5,6 +5,790 @@
 	<key>logFormatVersion</key>
 	<integer>9</integer>
 	<key>logs</key>
-	<dict/>
+	<dict>
+		<key>0E240A15-090D-4203-A61E-652418AADAA6</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>0E240A15-090D-4203-A61E-652418AADAA6.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>E</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>cardgames project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>cardgames</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build cardgames</string>
+			<key>timeStartedRecording</key>
+			<real>569706979.07643902</real>
+			<key>timeStoppedRecording</key>
+			<real>569706979.10420299</real>
+			<key>title</key>
+			<string>Build cardgames</string>
+			<key>uniqueIdentifier</key>
+			<string>0E240A15-090D-4203-A61E-652418AADAA6</string>
+		</dict>
+		<key>2925ECAA-BA9C-4F4E-81AD-63165803549B</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>2925ECAA-BA9C-4F4E-81AD-63165803549B.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>cardgames project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>cardgames</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build cardgames</string>
+			<key>timeStartedRecording</key>
+			<real>569703860.44247305</real>
+			<key>timeStoppedRecording</key>
+			<real>569703861.09206903</real>
+			<key>title</key>
+			<string>Build cardgames</string>
+			<key>uniqueIdentifier</key>
+			<string>2925ECAA-BA9C-4F4E-81AD-63165803549B</string>
+		</dict>
+		<key>2AFB09E5-C1D6-43A9-8C41-FBE6CB009BC8</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>2AFB09E5-C1D6-43A9-8C41-FBE6CB009BC8.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>cardgames project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>cardgames</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build cardgames</string>
+			<key>timeStartedRecording</key>
+			<real>569703245.60504997</real>
+			<key>timeStoppedRecording</key>
+			<real>569703246.36114299</real>
+			<key>title</key>
+			<string>Build cardgames</string>
+			<key>uniqueIdentifier</key>
+			<string>2AFB09E5-C1D6-43A9-8C41-FBE6CB009BC8</string>
+		</dict>
+		<key>30917C5D-9E35-4529-A880-0D2920F3B013</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>30917C5D-9E35-4529-A880-0D2920F3B013.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>cardgames project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>cardgames</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build cardgames</string>
+			<key>timeStartedRecording</key>
+			<real>569700492.46993995</real>
+			<key>timeStoppedRecording</key>
+			<real>569700493.43297303</real>
+			<key>title</key>
+			<string>Build cardgames</string>
+			<key>uniqueIdentifier</key>
+			<string>30917C5D-9E35-4529-A880-0D2920F3B013</string>
+		</dict>
+		<key>368EC96C-4ED3-4A83-9628-6CD572A65C9A</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>368EC96C-4ED3-4A83-9628-6CD572A65C9A.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>cardgames project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>cardgames</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build cardgames</string>
+			<key>timeStartedRecording</key>
+			<real>569704032.18756402</real>
+			<key>timeStoppedRecording</key>
+			<real>569704033.43848598</real>
+			<key>title</key>
+			<string>Build cardgames</string>
+			<key>uniqueIdentifier</key>
+			<string>368EC96C-4ED3-4A83-9628-6CD572A65C9A</string>
+		</dict>
+		<key>37A59D38-63D7-49F2-BB1E-17CA163906AB</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>37A59D38-63D7-49F2-BB1E-17CA163906AB.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>cardgames project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>cardgames</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build cardgames</string>
+			<key>timeStartedRecording</key>
+			<real>569704246.73107505</real>
+			<key>timeStoppedRecording</key>
+			<real>569704247.46076596</real>
+			<key>title</key>
+			<string>Build cardgames</string>
+			<key>uniqueIdentifier</key>
+			<string>37A59D38-63D7-49F2-BB1E-17CA163906AB</string>
+		</dict>
+		<key>39356921-2B91-4661-A079-A7B23A7ED012</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>39356921-2B91-4661-A079-A7B23A7ED012.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>E</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>cardgames project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>cardgames</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build cardgames</string>
+			<key>timeStartedRecording</key>
+			<real>569700466.804124</real>
+			<key>timeStoppedRecording</key>
+			<real>569700467.72988296</real>
+			<key>title</key>
+			<string>Build cardgames</string>
+			<key>uniqueIdentifier</key>
+			<string>39356921-2B91-4661-A079-A7B23A7ED012</string>
+		</dict>
+		<key>4FFE19E3-4649-4693-B1E4-DAB06F6E361A</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>4FFE19E3-4649-4693-B1E4-DAB06F6E361A.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>cardgames project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>cardgames</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build cardgames</string>
+			<key>timeStartedRecording</key>
+			<real>569707156.702268</real>
+			<key>timeStoppedRecording</key>
+			<real>569707156.74385297</real>
+			<key>title</key>
+			<string>Build cardgames</string>
+			<key>uniqueIdentifier</key>
+			<string>4FFE19E3-4649-4693-B1E4-DAB06F6E361A</string>
+		</dict>
+		<key>6F8E62C4-3591-4D75-B92B-4FD10D376BFB</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>6F8E62C4-3591-4D75-B92B-4FD10D376BFB.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>cardgames project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>cardgames</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build cardgames</string>
+			<key>timeStartedRecording</key>
+			<real>569708067.24220002</real>
+			<key>timeStoppedRecording</key>
+			<real>569708068.45636594</real>
+			<key>title</key>
+			<string>Build cardgames</string>
+			<key>uniqueIdentifier</key>
+			<string>6F8E62C4-3591-4D75-B92B-4FD10D376BFB</string>
+		</dict>
+		<key>74705F77-051B-4324-847F-09A43443449B</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>74705F77-051B-4324-847F-09A43443449B.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>cardgames project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>cardgames</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build cardgames</string>
+			<key>timeStartedRecording</key>
+			<real>569704456.01102996</real>
+			<key>timeStoppedRecording</key>
+			<real>569704456.641891</real>
+			<key>title</key>
+			<string>Build cardgames</string>
+			<key>uniqueIdentifier</key>
+			<string>74705F77-051B-4324-847F-09A43443449B</string>
+		</dict>
+		<key>7AC3A741-7D21-4208-88AD-CE57F38B4E5A</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>7AC3A741-7D21-4208-88AD-CE57F38B4E5A.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>E</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>cardgames project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>cardgames</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build cardgames</string>
+			<key>timeStartedRecording</key>
+			<real>569701303.38505805</real>
+			<key>timeStoppedRecording</key>
+			<real>569701304.39836299</real>
+			<key>title</key>
+			<string>Build cardgames</string>
+			<key>uniqueIdentifier</key>
+			<string>7AC3A741-7D21-4208-88AD-CE57F38B4E5A</string>
+		</dict>
+		<key>89DA6653-5E25-4D36-B9B4-2688465693AA</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>89DA6653-5E25-4D36-B9B4-2688465693AA.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>cardgames project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>cardgames</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build cardgames</string>
+			<key>timeStartedRecording</key>
+			<real>569707131.08700097</real>
+			<key>timeStoppedRecording</key>
+			<real>569707132.03416502</real>
+			<key>title</key>
+			<string>Build cardgames</string>
+			<key>uniqueIdentifier</key>
+			<string>89DA6653-5E25-4D36-B9B4-2688465693AA</string>
+		</dict>
+		<key>8C8BDD7F-67A8-4C2A-AD2B-20D5F1229CFF</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>8C8BDD7F-67A8-4C2A-AD2B-20D5F1229CFF.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>cardgames project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>cardgames</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build cardgames</string>
+			<key>timeStartedRecording</key>
+			<real>569703831.34152603</real>
+			<key>timeStoppedRecording</key>
+			<real>569703831.97604299</real>
+			<key>title</key>
+			<string>Build cardgames</string>
+			<key>uniqueIdentifier</key>
+			<string>8C8BDD7F-67A8-4C2A-AD2B-20D5F1229CFF</string>
+		</dict>
+		<key>8F74263F-F915-4785-BB68-4C0D6CEBC4EE</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>8F74263F-F915-4785-BB68-4C0D6CEBC4EE.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>E</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>cardgames project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>cardgames</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build cardgames</string>
+			<key>timeStartedRecording</key>
+			<real>569703200.27341402</real>
+			<key>timeStoppedRecording</key>
+			<real>569703200.87860894</real>
+			<key>title</key>
+			<string>Build cardgames</string>
+			<key>uniqueIdentifier</key>
+			<string>8F74263F-F915-4785-BB68-4C0D6CEBC4EE</string>
+		</dict>
+		<key>9747E2BD-EB37-4105-98D8-BC7EE665F284</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>9747E2BD-EB37-4105-98D8-BC7EE665F284.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>cardgames project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>cardgames</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build cardgames</string>
+			<key>timeStartedRecording</key>
+			<real>569700512.77885795</real>
+			<key>timeStoppedRecording</key>
+			<real>569700513.40938306</real>
+			<key>title</key>
+			<string>Build cardgames</string>
+			<key>uniqueIdentifier</key>
+			<string>9747E2BD-EB37-4105-98D8-BC7EE665F284</string>
+		</dict>
+		<key>9C812618-9837-4FBF-B40E-7B96DB433753</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>9C812618-9837-4FBF-B40E-7B96DB433753.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>E</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>cardgames project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>cardgames</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build cardgames</string>
+			<key>timeStartedRecording</key>
+			<real>569701684.24239194</real>
+			<key>timeStoppedRecording</key>
+			<real>569701684.83888602</real>
+			<key>title</key>
+			<string>Build cardgames</string>
+			<key>uniqueIdentifier</key>
+			<string>9C812618-9837-4FBF-B40E-7B96DB433753</string>
+		</dict>
+		<key>A7A64D00-F9F4-48F7-8130-EBD13F8FB8BD</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>A7A64D00-F9F4-48F7-8130-EBD13F8FB8BD.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>cardgames project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>cardgames</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build cardgames</string>
+			<key>timeStartedRecording</key>
+			<real>569704232.19458699</real>
+			<key>timeStoppedRecording</key>
+			<real>569704233.42677605</real>
+			<key>title</key>
+			<string>Build cardgames</string>
+			<key>uniqueIdentifier</key>
+			<string>A7A64D00-F9F4-48F7-8130-EBD13F8FB8BD</string>
+		</dict>
+		<key>AE7B918E-B1B8-4283-8A1D-FD6E384462D6</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>AE7B918E-B1B8-4283-8A1D-FD6E384462D6.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>cardgames project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>cardgames</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build cardgames</string>
+			<key>timeStartedRecording</key>
+			<real>569550579.68016005</real>
+			<key>timeStoppedRecording</key>
+			<real>569550580.33227897</real>
+			<key>title</key>
+			<string>Build cardgames</string>
+			<key>uniqueIdentifier</key>
+			<string>AE7B918E-B1B8-4283-8A1D-FD6E384462D6</string>
+		</dict>
+		<key>BCE1F5B8-B306-4CF0-A358-A16424FF2E7D</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>BCE1F5B8-B306-4CF0-A358-A16424FF2E7D.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>E</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>cardgames project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>cardgames</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build cardgames</string>
+			<key>timeStartedRecording</key>
+			<real>569701668.25671899</real>
+			<key>timeStoppedRecording</key>
+			<real>569701668.83678198</real>
+			<key>title</key>
+			<string>Build cardgames</string>
+			<key>uniqueIdentifier</key>
+			<string>BCE1F5B8-B306-4CF0-A358-A16424FF2E7D</string>
+		</dict>
+		<key>C2FAB0CF-2AD7-4907-9700-80D7FDAF868C</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>C2FAB0CF-2AD7-4907-9700-80D7FDAF868C.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>E</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>cardgames project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>cardgames</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build cardgames</string>
+			<key>timeStartedRecording</key>
+			<real>569701690.98822105</real>
+			<key>timeStoppedRecording</key>
+			<real>569701691.53312194</real>
+			<key>title</key>
+			<string>Build cardgames</string>
+			<key>uniqueIdentifier</key>
+			<string>C2FAB0CF-2AD7-4907-9700-80D7FDAF868C</string>
+		</dict>
+		<key>C3D11E37-7E8C-4F05-80BE-5C2BC56F5C16</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>C3D11E37-7E8C-4F05-80BE-5C2BC56F5C16.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>cardgames project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>cardgames</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build cardgames</string>
+			<key>timeStartedRecording</key>
+			<real>569701695.137012</real>
+			<key>timeStoppedRecording</key>
+			<real>569701695.94699097</real>
+			<key>title</key>
+			<string>Build cardgames</string>
+			<key>uniqueIdentifier</key>
+			<string>C3D11E37-7E8C-4F05-80BE-5C2BC56F5C16</string>
+		</dict>
+		<key>CC8024FD-7F1F-45E4-98AA-00C481424BA0</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>CC8024FD-7F1F-45E4-98AA-00C481424BA0.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>E</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>cardgames project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>cardgames</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build cardgames</string>
+			<key>timeStartedRecording</key>
+			<real>569706971.55176795</real>
+			<key>timeStoppedRecording</key>
+			<real>569706971.61466599</real>
+			<key>title</key>
+			<string>Build cardgames</string>
+			<key>uniqueIdentifier</key>
+			<string>CC8024FD-7F1F-45E4-98AA-00C481424BA0</string>
+		</dict>
+		<key>DB81B054-14E4-4853-A800-D67998ADDC37</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>DB81B054-14E4-4853-A800-D67998ADDC37.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>cardgames project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>cardgames</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build cardgames</string>
+			<key>timeStartedRecording</key>
+			<real>569704427.16889405</real>
+			<key>timeStoppedRecording</key>
+			<real>569704427.80784094</real>
+			<key>title</key>
+			<string>Build cardgames</string>
+			<key>uniqueIdentifier</key>
+			<string>DB81B054-14E4-4853-A800-D67998ADDC37</string>
+		</dict>
+		<key>F56BBB40-316F-4650-842C-BFFC654AB332</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>F56BBB40-316F-4650-842C-BFFC654AB332.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>E</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>cardgames project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>cardgames</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build cardgames</string>
+			<key>timeStartedRecording</key>
+			<real>569706892.78019202</real>
+			<key>timeStoppedRecording</key>
+			<real>569706892.81119204</real>
+			<key>title</key>
+			<string>Build cardgames</string>
+			<key>uniqueIdentifier</key>
+			<string>F56BBB40-316F-4650-842C-BFFC654AB332</string>
+		</dict>
+		<key>F7079BB5-1893-4DB6-92A6-83FB6139A4CE</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>F7079BB5-1893-4DB6-92A6-83FB6139A4CE.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>E</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>cardgames project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>cardgames</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build cardgames</string>
+			<key>timeStartedRecording</key>
+			<real>569703184.93873501</real>
+			<key>timeStoppedRecording</key>
+			<real>569703186.12487102</real>
+			<key>title</key>
+			<string>Build cardgames</string>
+			<key>uniqueIdentifier</key>
+			<string>F7079BB5-1893-4DB6-92A6-83FB6139A4CE</string>
+		</dict>
+		<key>FB62BD3A-2275-485E-A318-A8DE048D1DE5</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>FB62BD3A-2275-485E-A318-A8DE048D1DE5.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>E</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>cardgames project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>cardgames</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build cardgames</string>
+			<key>timeStartedRecording</key>
+			<real>569706874.77709401</real>
+			<key>timeStoppedRecording</key>
+			<real>569706874.80487895</real>
+			<key>title</key>
+			<string>Build cardgames</string>
+			<key>uniqueIdentifier</key>
+			<string>FB62BD3A-2275-485E-A318-A8DE048D1DE5</string>
+		</dict>
+		<key>FFE26D7D-0BED-4823-91CD-7829508ED881</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>FFE26D7D-0BED-4823-91CD-7829508ED881.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>cardgames project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>cardgames</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build cardgames</string>
+			<key>timeStartedRecording</key>
+			<real>569704410.25947201</real>
+			<key>timeStoppedRecording</key>
+			<real>569704411.49485803</real>
+			<key>title</key>
+			<string>Build cardgames</string>
+			<key>uniqueIdentifier</key>
+			<string>FFE26D7D-0BED-4823-91CD-7829508ED881</string>
+		</dict>
+	</dict>
 </dict>
 </plist>

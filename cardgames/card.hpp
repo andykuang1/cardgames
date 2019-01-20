@@ -16,8 +16,11 @@ using namespace std;
 
 class Card{
 public:
+    //constructors
     Card();
     Card(string cardname);
+    
+    //accessors
     void showCard();
     string getName();
     

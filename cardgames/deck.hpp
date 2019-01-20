@@ -18,17 +18,21 @@
 
 class Deck{
 public:
+    //constructors
     Deck();
+    //accessors
     void showTop();
     Card getTop();
-    void shuffle();
-    void insert_card(Card cardToInsert);
-    int decksize();
     void showCard(int i);
     Card getCard(int i);
-    void dealCard(Deck& otherDeck);
     void showDeck();
     void showCards(int start, int end);
+    int decksize();
+    //modifiers
+    void shuffle();
+    void insert_card(Card cardToInsert);
+    void dealCard(Deck& otherDeck);
+    
 private:
     vector<Card> m_deck;
 };
