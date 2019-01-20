@@ -8,55 +8,43 @@
 
 #include "deck.hpp"
 
-Deck::Deck(){
+template<class T>
+Deck<T>::Deck(){
 }
 
-void Deck::showTop(){
-    m_deck[0].showCard();
+template<class T>
+Deck<T>::~Deck(){
+    
 }
 
-Card Deck::getTop(){
+template<class T>
+T Deck<T>::getTop(){
     return m_deck[0];
 }
 
-void Deck::shuffle(){
+template<class T>
+void Deck<T>::shuffle(){
     unsigned seed = chrono::system_clock::now().time_since_epoch().count();
     std::shuffle(m_deck.begin(), m_deck.end(), default_random_engine(seed));
 }
 
-void Deck::insert_card(Card cardToInsert){
+template<class T>
+void Deck<T>::insert_card(T cardToInsert){
     m_deck.push_back(cardToInsert);
 }
 
-int Deck::decksize(){
+template<class T>
+int Deck<T>::decksize(){
     return m_deck.size();
 }
 
-void Deck::showCard(int i){
-    m_deck[i].showCard();
-}
-
-Card Deck::getCard(int i){
+template<class T>
+T Deck<T>::getCard(int i){
     return m_deck[i];
 }
 
-void Deck::dealCard(Deck& otherDeck){
+template<class T>
+void Deck<T>::dealCard(Deck& otherDeck){
     otherDeck.insert_card(m_deck[0]);
     m_deck.erase(m_deck.begin());
-}
-
-void Deck::showDeck(){
-    for (int i = 0; i < m_deck.size(); i++){
-        m_deck[i].showCard();
-        cout << " ";
-    }
-    cout << endl;
-}
-
-void Deck::showCards(int start, int end){
-    for (int i = 0; i < end; i++){
-        m_deck[i].showCard();
-        cout << " ";
-    }
-    cout << endl;
 }

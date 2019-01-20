@@ -24,6 +24,8 @@ public:
     int getValue();
     string getSuit();
     
+    //destructor
+    ~PlayingCard();
 private:
     int m_value = 1;
     int m_suit = 1;
