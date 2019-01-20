@@ -12,12 +12,32 @@ Blackjack::Blackjack(){
     startgame();
 }
 
-void Blackjack::createStartingDeck(){
-    for (int i = 1; i < 14; i++){
-        for (int j = 1; j < 5; j++){
-            m_deck.insert_card(PlayingCard(i, j));
-        }
+void showCard(Deck<PlayingCard> deckToShow, int cardToShow){
+    deckToShow.getCard(cardToShow).showCard();
+}
+
+void showDeck(Deck<PlayingCard> deckToShow){
+    for (int i = 0; i < deckToShow.decksize(); i++){
+        deckToShow.getCard(i).showCard();
+        cout << " ";
     }
+}
+
+int getValueWithoutA(Deck<PlayingCard> playingdeck){
+    int counter = 0;
+    for (int i = 0; i < playingdeck.decksize(); i++){
+        int value = playingdeck.getCard(i).getValue();
+        if (value > 10)
+            value = 10;
+        counter += value;
+    }
+    return counter;
+}
+
+void Blackjack::createStartingDeck(){
+    for (int i = 1; i < 14; i++)
+        for (int j = 1; j < 5; j++)
+            m_deck.insert_card(PlayingCard(i, j));
 }
 
 void Blackjack::dealStartingHand(){
@@ -33,8 +53,9 @@ void Blackjack::startgame(){
     cout << "Hello! You have chosen Blackjack. Let's get started!" << endl;
     dealStartingHand();
     cout << "Dealer has cards: ";
-    dealer_hand.showCard(1);
-    cout << " __ " << endl;
-    cout << "Your cards are:   ";
-    m_hand.showDeck();
+    cout << " __ ";
+    showCard(dealer_hand, 1);
+    cout << "\nYour cards are:    ";
+    showDeck(m_hand);
+    cout << "(" + to_string(getValueWithoutA(m_hand)) + ")" << endl;;
 }

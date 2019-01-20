@@ -9,17 +9,21 @@
 #include "card.hpp"
 
 Card::Card(){
-    name = "";
+    m_name = "";
+}
+
+Card::~Card(){
+    
 }
 
 Card::Card(string cardname){
-    name =  cardname;
+    m_name =  cardname;
 }
 
 void Card::showCard(){
-    cout << name;
+    cout << m_name;
 }
 
 string Card::getName(){
-    return name;
+    return m_name;
 }

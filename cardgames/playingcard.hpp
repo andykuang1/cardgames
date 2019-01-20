@@ -14,13 +14,18 @@
 
 class PlayingCard : public Card{
 public:
+    //constructors
     PlayingCard();
     PlayingCard(string cardname);
     PlayingCard(int cardvalue, int cardsuit);
     PlayingCard(char cardvalue, int cardsuit);
+    
+    //accessors
     int getValue();
     string getSuit();
     
+    //destructor
+    ~PlayingCard();
 private:
     int m_value = 1;
     int m_suit = 1;

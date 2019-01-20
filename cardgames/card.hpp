@@ -16,13 +16,17 @@ using namespace std;
 
 class Card{
 public:
+    //constructors
     Card();
     Card(string cardname);
+    //accessors
     void showCard();
     string getName();
-    
+    //destructor
+    ~Card();
+
 protected:
-    string name;
+    string m_name;
     string cardfront;
     string cardback;
 };

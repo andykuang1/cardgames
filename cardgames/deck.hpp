@@ -14,23 +14,26 @@
 #include <vector>
 #include <random>
 #include <chrono>
-#include "card.hpp"
+using namespace std;
 
+template<class T>
 class Deck{
 public:
+    //constructors
     Deck();
-    void showTop();
-    Card getTop();
-    void shuffle();
-    void insert_card(Card cardToInsert);
+    //accessors
     int decksize();
-    void showCard(int i);
-    Card getCard(int i);
-    void dealCard(Deck& otherDeck);
-    void showDeck();
-    void showCards(int start, int end);
+    T getTop();
+    T getCard(int i);
+    //modifiers
+    void shuffle();
+    void insert_card(T cardToInsert);
+    void dealCard(Deck<T>& otherDeck);
+    //destructor
+    ~Deck();
+    
 private:
-    vector<Card> m_deck;
+    vector<T> m_deck;
 };
 
 #endif /* deck_hpp */

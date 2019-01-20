@@ -54,26 +54,31 @@ int suitToValue(char cardsuit){
 }
 
 PlayingCard::PlayingCard(){
-    name = "";
+    m_name = "";
+    cardback = "http://images.penguinmagic.com/images/products/original/8007b.jpg";
+}
+
+PlayingCard::~PlayingCard(){
+    
 }
 
 //using a name such as AS (for ace of spades)
 PlayingCard::PlayingCard(string cardname){
-    name = cardname;
+    m_name = cardname;
     m_value = letterToValue(cardname[0]);
     m_suit = suitToValue(cardname[1]);
 }
 
 //using value and suit such as 1,4 for ace of spades)
 PlayingCard::PlayingCard(int cardvalue, int cardsuit){
-    name = cardvalues[cardvalue-1] + cardsuits[cardsuit-1];
+    m_name = cardvalues[cardvalue-1] + cardsuits[cardsuit-1];
     m_value = cardvalue;
     m_suit = cardsuit;
 }
 
 //using char and suit such as A,4 for ace of spades)
 PlayingCard::PlayingCard(char cardvalue, int cardsuit){
-    name = cardvalue + cardsuits[cardsuit-1];
+    m_name = cardvalue + cardsuits[cardsuit-1];
     m_value = letterToValue(cardvalue);
     m_suit = cardsuit;
 }

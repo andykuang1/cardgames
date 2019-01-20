@@ -10,8 +10,8 @@
 #define blackjack_hpp
 
 #include <stdio.h>
-#include "deck.hpp"
 #include "playingcard.hpp"
+#include "deck.cpp"
 
 class Blackjack{
 public:
@@ -21,9 +21,9 @@ public:
     
 private:
     void startgame();
-    Deck m_deck;
-    Deck m_hand;
-    Deck dealer_hand;
+    Deck<PlayingCard> m_deck;
+    Deck<PlayingCard> m_hand;
+    Deck<PlayingCard> dealer_hand;
 };
 
 #endif /* blackjack_hpp */
