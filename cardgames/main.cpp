@@ -55,8 +55,12 @@ int main(int argc, const char * argv[]) {
         cout << "[2]Exit" << endl;
         string option = "";
         cin >> option;
+        try{
         if (playgame(stoi(option)) == 0)
             playing = false;
+        } catch(invalid_argument){
+            cout << "Your option was not recognized. Please try again\n" << endl;
+        }
     }
     return 0;
 }
