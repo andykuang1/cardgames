@@ -9,7 +9,6 @@
 #include "blackjack.hpp"
 
 Blackjack::Blackjack(){
-    startgame();
 }
 
 void showCard(Deck<PlayingCard> deckToShow, int cardToShow){
@@ -62,9 +61,9 @@ void Blackjack::createStartingDeck(){
 
 void Blackjack::dealStartingHand(){
     m_deck.shuffle();
-    m_deck.dealCard(m_hand);
+    m_deck.dealCard(m_hand[0]);
     m_deck.dealCard(dealer_hand);
-    m_deck.dealCard(m_hand);
+    m_deck.dealCard(m_hand[0]);
     m_deck.dealCard(dealer_hand);
 }
 
@@ -81,10 +80,13 @@ void Blackjack::displayGameState(){
     cout << "Dealer's cards: ";
     cout << " __ ";
     showCard(dealer_hand, 1);
-    cout << "\nYour cards:    ";
-    showDeck(m_hand);
-    int valueOfHand = getValueOfDeck(m_hand);
-    cout << "(" + to_string(valueOfHand) + ")" << endl;
+    cout << "\nYour cards:" << endl;
+    for (int i = 0; i < numHands; i++){
+        cout << "Hand " + to_string(i+1) + ":          ";
+        showDeck(m_hand[i]);
+        int valueOfHand = getValueOfDeck(m_hand[i]);
+        cout << "(" + to_string(valueOfHand) + ")" << endl;
+    }
 }
 
 //after dealer reveal
@@ -95,46 +97,105 @@ void Blackjack::displayGameState2(){
     int dealerHand = getValueOfDeck(dealer_hand);
     cout << "(" + to_string(dealerHand) + ")";
     cout << "\nYour value: ";
-    int valueOfHand = getValueOfDeck(m_hand);
-    cout << to_string(valueOfHand) << endl;
+    cout << to_string(maxValue) << endl;
 }
 
 //compare value at end of game
 void Blackjack::decideWinner(){
-    if (getValueOfDeck(m_hand) > getValueOfDeck(dealer_hand))
-        cout << "Your value (" + to_string(getValueOfDeck(m_hand)) << ") is greater than the dealer's (" + to_string(getValueOfDeck(dealer_hand)) << "). You win!" << endl;
-    else if (getValueOfDeck(dealer_hand) > getValueOfDeck(m_hand))
-        cout << "Your value (" + to_string(getValueOfDeck(m_hand)) << ") is less than the dealer's (" + to_string(getValueOfDeck(dealer_hand)) << "). Unfortunately, you've lost this round." << endl;
+    updateMaxValue();
+    if (maxValue > getValueOfDeck(dealer_hand))
+        cout << "Your value (" + to_string(maxValue) << ") is greater than the dealer's (" + to_string(getValueOfDeck(dealer_hand)) << "). You win!" << endl;
+    else if (getValueOfDeck(dealer_hand) > maxValue)
+        cout << "Your value (" + to_string(maxValue) << ") is less than the dealer's (" + to_string(getValueOfDeck(dealer_hand)) << "). Unfortunately, you've lost this round." << endl;
     else
-        cout << "Your value and the dealer's are both " + to_string(getValueOfDeck(m_hand)) + ". You tied!";
+        cout << "Your value and the dealer's are both " + to_string(maxValue) + ". You tied!";
     
+}
+
+void Blackjack::updateMaxValue(){
+    for (int i = 0; i < numHands; i++){
+        if ((getValueOfDeck(m_hand[i]) <= 21) && getValueOfDeck(m_hand[i]) > maxValue)
+            maxValue = getValueOfDeck(m_hand[i]);
+    }
 }
 
 void Blackjack::playgame(){
     bool playing = true;
+    bool allowSplit = false;
+    string filler;
+    int currentHand = 0;
     //playerturn
     cout << "It is your turn!" << endl;
     while (playing){
         displayGameState();
         char option;
-        cout << "Would you like to [H]it or [S]tand?" << endl;
+        cout << "Currently playing Hand " + to_string(currentHand+1) << endl;
+        //same card, allow split
+        if ((m_hand[currentHand].getCard(0).getValue() == m_hand[currentHand].getCard(1).getValue())){
+            cout << "Would you like to [H]it, [S]tand, or S[p]lit?" << endl;
+            allowSplit = true;
+        }
+        //blackjack
+        else if (((m_hand[currentHand].decksize() == 2) && (getValueOfDeck(m_hand[currentHand]) == 21)) || ((dealer_hand.decksize() == 2) && (getValueOfDeck(dealer_hand) == 21))){
+            cout << "Press enter to continue" << endl;
+            cin >> filler;
+            cout << "Blackjack!" << endl;
+            maxValue = getValueOfDeck(m_hand[currentHand]);
+            cout << "The dealer's cards were : ";
+            showDeck(dealer_hand);
+            cout << "(" + to_string(getValueOfDeck(dealer_hand)) + ")." << endl;
+            decideWinner();
+            return;
+        }
+        else
+            cout << "Would you like to [H]it or [S]tand?" << endl;
         cin >> option;
         //#######TODO: split, mis-inputs#######
         if ((option == 'H') || option == 'h'){
             cout << "Hit!" << endl;
-            m_deck.dealCard(m_hand);
-            if (getValueOfDeck(m_hand) > 21){
+            m_deck.dealCard(m_hand[currentHand]);
+            //bust
+            if (getValueOfDeck(m_hand[currentHand]) > 21){
                 displayGameState();
-                cout << "Your value (" + to_string(getValueOfDeck(m_hand)) + ") is a bust. Unfortunately, you've lost this round." << endl;
-                cout << "The dealer's cards were : ";
-                showDeck(dealer_hand);
-                cout << "(" + to_string(getValueOfDeck(dealer_hand)) + ")." << endl;
-                return;
+                cout << "Your value (" + to_string(getValueOfDeck(m_hand[currentHand])) + ") is a bust. Unfortunately, you've lost this hand." << endl;
+                currentHand += 1;
+                //only one hand
+                if ((numHands == 1) && (currentHand == numHands)){
+                    cout << "The dealer's cards were : ";
+                    showDeck(dealer_hand);
+                    cout << "(" + to_string(getValueOfDeck(dealer_hand)) + ")." << endl;
+                    return;
+                }
+                //multiple hands all bust
+                else if ((currentHand == numHands) && (maxValue > 21)){
+                    cout << "All your hands are bust. You have lost this round." << endl;
+                    cout << "The dealer's cards were : ";
+                    showDeck(dealer_hand);
+                    cout << "(" + to_string(getValueOfDeck(dealer_hand)) + ")." << endl;
+                    return;
+                }
+                //bust and no previous legal hands
+                else if (maxValue == 0)
+                    maxValue = getValueOfDeck(m_hand[currentHand-1]);
             }
         }
         else if ((option == 'S') || (option == 's')){
-            cout << "Stand! Your final value is " + to_string(getValueOfDeck(m_hand)) << endl;
-            playing = false;
+            cout << "Stand! Your final value for this hand is " + to_string(getValueOfDeck(m_hand[currentHand])) << endl;
+            if ((getValueOfDeck(m_hand[currentHand]) > maxValue) || maxValue > 21)
+                maxValue = getValueOfDeck(m_hand[currentHand]);
+            currentHand += 1;
+            if (currentHand == numHands){
+                playing = false;
+            }
+        }
+        else if ((option == 'P') || (option == 'p')){
+            if (allowSplit == true){
+                m_hand[numHands].insert_card(m_hand[currentHand].remove_card(1));
+                m_deck.dealCard(m_hand[currentHand]);
+                m_deck.dealCard(m_hand[numHands]);
+                numHands++;
+            }
+            allowSplit = false;
         }
     }
     
@@ -143,14 +204,15 @@ void Blackjack::playgame(){
     cout << "It is now the dealer's turn! We will proceed card by card." << endl;
     while (playing){
         //######TODO: make it accept just enter######
-        cout << "Press enter to continue.";
-        string filler = "";
+        cout << "Press enter to continue." << endl;
         cin >> filler;
         cin.ignore();
         displayGameState2();
         if (getValueOfDeck(dealer_hand) < 17){
             m_deck.dealCard(dealer_hand);
             if (getValueOfDeck(dealer_hand) > 21){
+                cout << "Press enter to continue.";
+                cin >> filler;
                 displayGameState2();
                 cout << "The dealer's cards were : ";
                 showDeck(dealer_hand);

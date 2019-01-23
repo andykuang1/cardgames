@@ -28,6 +28,7 @@ public:
     //modifiers
     void shuffle();
     void insert_card(T cardToInsert);
+    T remove_card(int i);
     void dealCard(Deck<T>& otherDeck);
     //destructor
     ~Deck();
