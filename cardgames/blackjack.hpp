@@ -18,6 +18,11 @@ public:
     Blackjack();
     void createStartingDeck();
     void dealStartingHand();
+    //before dealer reveal
+    void displayGameState();
+    //after dealer reveal
+    void displayGameState2();
+    void decideWinner();
     
 private:
     void startgame();
