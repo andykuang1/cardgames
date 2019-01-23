@@ -9,20 +9,50 @@
 #include <iostream>
 #include "blackjack.hpp"
 #include <string>
+#include <algorithm>
 using namespace std;
 
-void playgame(int option){
+string continueGameOptions[] = {"Y", "y", "N", "n"};
+
+int playgame(int option){
     switch(option){
-        case 1:
-            Blackjack object;
+        case 1:{
+            bool playing = true;
+            while (playing){
+                Blackjack object;
+                cout << "Would you like to continue playing Blackjack?" << endl;
+                cout << "[Y]es" << endl << "[N]o" << endl;
+                string continueGame;
+                while ((continueGame != "Y") && (continueGame != "y") && (continueGame != "N") && (continueGame != "n")){
+                    cin >> continueGame;
+                    if ((continueGame == "N") || (continueGame == "n"))
+                        playing = false;
+                    else if ((continueGame == "Y") || (continueGame == "y"))
+                        continue;
+                    else
+                        cout << "Your choice was not recognized. Please try again.";
+                }
+            }
+            break;
+        }
+        case 2:{
+            return 0;
+            break;
+        }
     }
+    return 1;
 }
 
 int main(int argc, const char * argv[]) {
-    cout << "Choose the game you would like to play. The options are displayed below:" << endl;
-    cout << "[1]Blackjack" << endl;
-    string option = "";
-    cin >> option;
-    playgame(stoi(option));
+    bool playing = true;
+    while (playing){
+        cout << "Choose the game you would like to play. The options are displayed below:" << endl;
+        cout << "[1]Blackjack" << endl;
+        cout << "[2]Exit" << endl;
+        string option = "";
+        cin >> option;
+        if (playgame(stoi(option)) == 0)
+            playing = false;
+    }
     return 0;
 }

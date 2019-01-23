@@ -62,7 +62,7 @@ PlayingCard::~PlayingCard(){
     
 }
 
-//using a name such as AS (for ace of spades)
+//using a name such as "AS" (for ace of spades)
 PlayingCard::PlayingCard(string cardname){
     m_name = cardname;
     m_value = letterToValue(cardname[0]);

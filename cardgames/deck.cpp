@@ -43,6 +43,7 @@ T Deck<T>::getCard(int i){
     return m_deck[i];
 }
 
+//deals card from top of deck to a different deck
 template<class T>
 void Deck<T>::dealCard(Deck& otherDeck){
     otherDeck.insert_card(m_deck[0]);

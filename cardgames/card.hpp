@@ -20,7 +20,9 @@ public:
     Card();
     Card(string cardname);
     //accessors
+    //prints card name
     void showCard();
+    //returns card name
     string getName();
     //destructor
     ~Card();
