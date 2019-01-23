@@ -119,6 +119,7 @@ void Blackjack::playgame(){
         char option;
         cout << "Would you like to [H]it or [S]tand?" << endl;
         cin >> option;
+        //#######TODO: split, mis-inputs#######
         if ((option == 'H') || option == 'h'){
             cout << "Hit!" << endl;
             m_deck.dealCard(m_hand);
@@ -141,13 +142,23 @@ void Blackjack::playgame(){
     //dealerturn
     cout << "It is now the dealer's turn! We will proceed card by card." << endl;
     while (playing){
+        //######TODO: make it accept just enter######
         cout << "Press enter to continue.";
         string filler = "";
         cin >> filler;
         cin.ignore();
         displayGameState2();
-        if (getValueOfDeck(dealer_hand) < 17)
+        if (getValueOfDeck(dealer_hand) < 17){
             m_deck.dealCard(dealer_hand);
+            if (getValueOfDeck(dealer_hand) > 21){
+                displayGameState2();
+                cout << "The dealer's cards were : ";
+                showDeck(dealer_hand);
+                cout << "(" + to_string(getValueOfDeck(dealer_hand)) + ")." << endl;
+                cout << "The dealer has bust. You have won!" << endl;
+                return;
+            }
+        }
         else
             playing = false;
     }

@@ -412,6 +412,35 @@
 			<key>uniqueIdentifier</key>
 			<string>3EDB7AC2-8246-4E17-B316-DB2D80DFFF3F</string>
 		</dict>
+		<key>40F377C5-B116-4982-BDE4-68A7A6F7C3EB</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>40F377C5-B116-4982-BDE4-68A7A6F7C3EB.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>cardgames project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>cardgames</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build cardgames</string>
+			<key>timeStartedRecording</key>
+			<real>569916288.54849303</real>
+			<key>timeStoppedRecording</key>
+			<real>569916289.32324302</real>
+			<key>title</key>
+			<string>Build cardgames</string>
+			<key>uniqueIdentifier</key>
+			<string>40F377C5-B116-4982-BDE4-68A7A6F7C3EB</string>
+		</dict>
 		<key>413527A9-012F-4E60-860C-84F3B57145A7</key>
 		<dict>
 			<key>className</key>
