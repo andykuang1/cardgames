@@ -24,11 +24,15 @@ public:
     void displayGameState2();
     void decideWinner();
     
-private:
+    void updateMaxValue();
     void startgame();
+    
+private:
     void playgame();
+    int numHands = 1;
+    int maxValue = 0;
     Deck<PlayingCard> m_deck;
-    Deck<PlayingCard> m_hand;
+    Deck<PlayingCard> m_hand[4];
     Deck<PlayingCard> dealer_hand;
 };
 

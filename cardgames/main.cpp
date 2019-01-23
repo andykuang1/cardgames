@@ -20,6 +20,7 @@ int playgame(int option){
             bool playing = true;
             while (playing){
                 Blackjack object;
+                object.startgame();
                 cout << "Would you like to continue playing Blackjack?" << endl;
                 cout << "[Y]es" << endl << "[N]o" << endl;
                 string continueGame;
@@ -30,7 +31,7 @@ int playgame(int option){
                     else if ((continueGame == "Y") || (continueGame == "y"))
                         continue;
                     else
-                        cout << "Your choice was not recognized. Please try again.";
+                        cout << "Your choice was not recognized. Please try again." << endl;
                 }
             }
             break;
@@ -38,6 +39,9 @@ int playgame(int option){
         case 2:{
             return 0;
             break;
+        }
+        default:{
+            cout << "Sorry, your choice was not recognized" << endl;
         }
     }
     return 1;

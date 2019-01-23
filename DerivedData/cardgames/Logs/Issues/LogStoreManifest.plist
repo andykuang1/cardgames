@@ -6,7 +6,7 @@
 	<integer>9</integer>
 	<key>logs</key>
 	<dict>
-		<key>8A546F36-7488-4010-A8AC-D8C7189E7ED8</key>
+		<key>12E095A6-9626-4582-81EA-B0E9BC16784D</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -15,19 +15,19 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.target.product-type.tool</string>
 			<key>fileName</key>
-			<string>8A546F36-7488-4010-A8AC-D8C7189E7ED8.xcactivitylog</string>
+			<string>12E095A6-9626-4582-81EA-B0E9BC16784D.xcactivitylog</string>
 			<key>highLevelStatus</key>
 			<string>W</string>
 			<key>signature</key>
 			<string>cardgames-agdhjrusqamfccgpneccvsvkrlkl</string>
 			<key>timeStartedRecording</key>
-			<real>569915962.96745706</real>
+			<real>569972519.93428004</real>
 			<key>timeStoppedRecording</key>
-			<real>569915963.58142805</real>
+			<real>569972521.19048595</real>
 			<key>title</key>
 			<string>Build target cardgames</string>
 			<key>uniqueIdentifier</key>
-			<string>8A546F36-7488-4010-A8AC-D8C7189E7ED8</string>
+			<string>12E095A6-9626-4582-81EA-B0E9BC16784D</string>
 		</dict>
 	</dict>
 	<key>preserveOldLogs</key>
