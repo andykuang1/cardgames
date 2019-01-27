@@ -52,19 +52,19 @@ int getValueOfDeck(Deck<PlayingCard> playingdeck){
 void Blackjack::createStartingDeck(){
     Deck<PlayingCard> tempDeck;
     //1 is ace, 13 is king
-//    for (int i = 1; i < 14; i++)
-//        //1 is diamonds, 2 is clubs, 3 is hearts, 4 is spades
-//        for (int j = 1; j < 5; j++)
-//            tempDeck.insert_card(PlayingCard(i, j));
-    tempDeck.insert_card(PlayingCard("AS"));
-    tempDeck.insert_card(PlayingCard(5,1));
-    tempDeck.insert_card(PlayingCard("AD"));
-    tempDeck.insert_card(PlayingCard(6,2));
-    tempDeck.insert_card(PlayingCard("TS"));
-    tempDeck.insert_card(PlayingCard("AC"));
-    tempDeck.insert_card(PlayingCard("5S"));
-    tempDeck.insert_card(PlayingCard("7D"));
-    m_deck = tempDeck;
+    for (int i = 1; i < 14; i++)
+        //1 is diamonds, 2 is clubs, 3 is hearts, 4 is spades
+        for (int j = 1; j < 5; j++)
+            tempDeck.insert_card(PlayingCard(i, j));
+//    tempDeck.insert_card(PlayingCard("AS"));
+//    tempDeck.insert_card(PlayingCard(5,1));
+//    tempDeck.insert_card(PlayingCard("AD"));
+//    tempDeck.insert_card(PlayingCard(6,2));
+//    tempDeck.insert_card(PlayingCard("TS"));
+//    tempDeck.insert_card(PlayingCard("AC"));
+//    tempDeck.insert_card(PlayingCard("5S"));
+//    tempDeck.insert_card(PlayingCard("7D"));
+//    m_deck = tempDeck;
 }
 
 void Blackjack::dealStartingHand(){
