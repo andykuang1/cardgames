@@ -52,15 +52,23 @@ int getValueOfDeck(Deck<PlayingCard> playingdeck){
 void Blackjack::createStartingDeck(){
     Deck<PlayingCard> tempDeck;
     //1 is ace, 13 is king
-    for (int i = 1; i < 14; i++)
-        //1 is diamonds, 2 is clubs, 3 is hearts, 4 is spades
-        for (int j = 1; j < 5; j++)
-            tempDeck.insert_card(PlayingCard(i, j));
+//    for (int i = 1; i < 14; i++)
+//        //1 is diamonds, 2 is clubs, 3 is hearts, 4 is spades
+//        for (int j = 1; j < 5; j++)
+//            tempDeck.insert_card(PlayingCard(i, j));
+    tempDeck.insert_card(PlayingCard("AS"));
+    tempDeck.insert_card(PlayingCard(5,1));
+    tempDeck.insert_card(PlayingCard("AD"));
+    tempDeck.insert_card(PlayingCard(6,2));
+    tempDeck.insert_card(PlayingCard("TS"));
+    tempDeck.insert_card(PlayingCard("AC"));
+    tempDeck.insert_card(PlayingCard("5S"));
+    tempDeck.insert_card(PlayingCard("7D"));
     m_deck = tempDeck;
 }
 
 void Blackjack::dealStartingHand(){
-    m_deck.shuffle();
+    //m_deck.shuffle();
     m_deck.dealCard(m_hand[0]);
     m_deck.dealCard(dealer_hand);
     m_deck.dealCard(m_hand[0]);
@@ -137,7 +145,7 @@ void Blackjack::playgame(){
         cout << "Currently playing Hand " + to_string(currentHand+1) << endl;
         //same card, allow split
         if ((m_hand[currentHand].getCard(0).getValue() == m_hand[currentHand].getCard(1).getValue())){
-            cout << "Would you like to [H]it, [S]tand, or S[p]lit?" << endl;
+            cout << "Would you like to [H]it, [S]tand, or Split [P]airs?" << endl;
             allowSplit = true;
         }
         //blackjack
@@ -199,7 +207,13 @@ void Blackjack::playgame(){
                 m_hand[numHands].insert_card(m_hand[currentHand].remove_card(1));
                 m_deck.dealCard(m_hand[currentHand]);
                 m_deck.dealCard(m_hand[numHands]);
+                updateMaxValue();
                 numHands++;
+                if (m_hand[currentHand].getCard(0).getValue() == 1){
+                    displayGameState();
+                    cout << "You have split Aces!" << endl;
+                    playing = false;
+                }
             }
             allowSplit = false;
         }
