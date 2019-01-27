@@ -91,13 +91,18 @@ void Blackjack::displayGameState(){
 
 //after dealer reveal
 void Blackjack::displayGameState2(){
-    cout << endl;
     cout << "Dealer's cards: ";
     showDeck(dealer_hand);
     int dealerHand = getValueOfDeck(dealer_hand);
     cout << "(" + to_string(dealerHand) + ")";
     cout << "\nYour value: ";
     cout << to_string(maxValue) << endl;
+}
+
+void enterContinue(){
+    cout << "Press enter to continue." << endl;
+    while (cin.get() != '\n')
+        ;
 }
 
 //compare value at end of game
@@ -137,8 +142,8 @@ void Blackjack::playgame(){
         }
         //blackjack
         else if (((m_hand[currentHand].decksize() == 2) && (getValueOfDeck(m_hand[currentHand]) == 21)) || ((dealer_hand.decksize() == 2) && (getValueOfDeck(dealer_hand) == 21))){
-            cout << "Press enter to continue" << endl;
-            cin >> filler;
+            cin.ignore();
+            enterContinue();
             cout << "Blackjack!" << endl;
             maxValue = getValueOfDeck(m_hand[currentHand]);
             cout << "The dealer's cards were : ";
@@ -150,7 +155,7 @@ void Blackjack::playgame(){
         else
             cout << "Would you like to [H]it or [S]tand?" << endl;
         cin >> option;
-        //#######TODO: split, mis-inputs#######
+        //#######TODO: split Aces
         if ((option == 'H') || option == 'h'){
             cout << "Hit!" << endl;
             m_deck.dealCard(m_hand[currentHand]);
@@ -161,6 +166,7 @@ void Blackjack::playgame(){
                 currentHand += 1;
                 //only one hand
                 if ((numHands == 1) && (currentHand == numHands)){
+                    cout << "All your hands are bust. You lost this round." << endl;
                     cout << "The dealer's cards were : ";
                     showDeck(dealer_hand);
                     cout << "(" + to_string(getValueOfDeck(dealer_hand)) + ")." << endl;
@@ -201,22 +207,16 @@ void Blackjack::playgame(){
     
     playing = true;
     //dealerturn
-    cout << "It is now the dealer's turn! We will proceed card by card." << endl;
+    cout << "\nIt is now the dealer's turn! We will proceed card by card." << endl;
+    cin.ignore();
     while (playing){
-        //######TODO: make it accept just enter######
-        cout << "Press enter to continue." << endl;
-        cin >> filler;
-        cin.ignore();
         displayGameState2();
         if (getValueOfDeck(dealer_hand) < 17){
             m_deck.dealCard(dealer_hand);
+            enterContinue();
             if (getValueOfDeck(dealer_hand) > 21){
-                cout << "Press enter to continue.";
-                cin >> filler;
                 displayGameState2();
-                cout << "The dealer's cards were : ";
-                showDeck(dealer_hand);
-                cout << "(" + to_string(getValueOfDeck(dealer_hand)) + ")." << endl;
+                enterContinue();
                 cout << "The dealer has bust. You have won!" << endl;
                 return;
             }
@@ -224,6 +224,6 @@ void Blackjack::playgame(){
         else
             playing = false;
     }
-    
+    enterContinue();
     decideWinner();
 }

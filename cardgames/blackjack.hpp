@@ -16,6 +16,9 @@
 class Blackjack{
 public:
     Blackjack();
+    void startgame();
+    
+private:
     void createStartingDeck();
     void dealStartingHand();
     //before dealer reveal
@@ -25,9 +28,7 @@ public:
     void decideWinner();
     
     void updateMaxValue();
-    void startgame();
     
-private:
     void playgame();
     int numHands = 1;
     int maxValue = 0;

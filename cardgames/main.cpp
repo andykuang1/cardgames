@@ -41,7 +41,7 @@ int playgame(int option){
             break;
         }
         default:{
-            cout << "Sorry, your choice was not recognized" << endl;
+            cout << "Sorry, your choice was not recognized." << endl;
         }
     }
     return 1;
@@ -55,8 +55,12 @@ int main(int argc, const char * argv[]) {
         cout << "[2]Exit" << endl;
         string option = "";
         cin >> option;
+        try{
         if (playgame(stoi(option)) == 0)
             playing = false;
+        } catch(invalid_argument){
+            cout << "Sorry, your choice was not recognized." << endl;
+        }
     }
     return 0;
 }
