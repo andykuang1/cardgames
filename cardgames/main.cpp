@@ -17,23 +17,20 @@ string continueGameOptions[] = {"Y", "y", "N", "n"};
 int playgame(int option){
     switch(option){
         case 1:{
-            bool playing = true;
-            while (playing){
-                Blackjack object;
-                object.startgame();
-                cout << "Would you like to continue playing Blackjack?" << endl;
-                cout << "[Y]es" << endl << "[N]o" << endl;
-                string continueGame;
-                while ((continueGame != "Y") && (continueGame != "y") && (continueGame != "N") && (continueGame != "n")){
-                    cin >> continueGame;
-                    if ((continueGame == "N") || (continueGame == "n"))
-                        playing = false;
-                    else if ((continueGame == "Y") || (continueGame == "y"))
-                        continue;
-                    else
-                        cout << "Your choice was not recognized. Please try again." << endl;
-                }
-            }
+            Blackjack object;
+            object.playgame();
+//                cout << "Would you like to continue playing Blackjack?" << endl;
+//                cout << "[Y]es" << endl << "[N]o" << endl;
+//                string continueGame;
+//                while ((continueGame != "Y") && (continueGame != "y") && (continueGame != "N") && (continueGame != "n")){
+//                    cin >> continueGame;
+//                    if ((continueGame == "N") || (continueGame == "n"))
+//                        playing = false;
+//                    else if ((continueGame == "Y") || (continueGame == "y"))
+//                        continue;
+//                    else
+//                        cout << "Your choice was not recognized. Please try again." << endl;
+//                }
             break;
         }
         case 2:{
