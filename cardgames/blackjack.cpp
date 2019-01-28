@@ -56,6 +56,7 @@ void Blackjack::createStartingDeck(){
         //1 is diamonds, 2 is clubs, 3 is hearts, 4 is spades
         for (int j = 1; j < 5; j++)
             tempDeck.insert_card(PlayingCard(i, j));
+//for split aces testing
 //    tempDeck.insert_card(PlayingCard("AS"));
 //    tempDeck.insert_card(PlayingCard(5,1));
 //    tempDeck.insert_card(PlayingCard("AD"));
@@ -64,11 +65,12 @@ void Blackjack::createStartingDeck(){
 //    tempDeck.insert_card(PlayingCard("AC"));
 //    tempDeck.insert_card(PlayingCard("5S"));
 //    tempDeck.insert_card(PlayingCard("7D"));
-//    m_deck = tempDeck;
+    
+    m_deck = tempDeck;
 }
 
 void Blackjack::dealStartingHand(){
-    //m_deck.shuffle();
+    m_deck.shuffle();
     m_deck.dealCard(m_hand[0]);
     m_deck.dealCard(dealer_hand);
     m_deck.dealCard(m_hand[0]);
@@ -77,10 +79,10 @@ void Blackjack::dealStartingHand(){
 
 void Blackjack::startgame(){
     //standard 52 card playing deck
+    clearHands();
     createStartingDeck();
     cout << "Hello! You have chosen Blackjack. Let's get started." << endl;
     dealStartingHand();
-    playgame();
 }
 
 //before dealer reveal
@@ -121,7 +123,7 @@ void Blackjack::decideWinner(){
     else if (getValueOfDeck(dealer_hand) > maxValue)
         cout << "Your value (" + to_string(maxValue) << ") is less than the dealer's (" + to_string(getValueOfDeck(dealer_hand)) << "). Unfortunately, you've lost this round." << endl;
     else
-        cout << "Your value and the dealer's are both " + to_string(maxValue) + ". You tied!";
+        cout << "Your value and the dealer's are both " + to_string(maxValue) + ". You tied!" << endl;
     
 }
 
@@ -132,112 +134,151 @@ void Blackjack::updateMaxValue(){
     }
 }
 
+void Blackjack::clearHands(){
+    numHands = 1;
+    maxValue = 0;
+    Deck<PlayingCard> tempDeck;
+    for (int i = 0; i < 4; i++){
+        m_hand[i] = tempDeck;
+    }
+    dealer_hand = tempDeck;
+}
+
 void Blackjack::playgame(){
-    bool playing = true;
-    bool allowSplit = false;
-    string filler;
-    int currentHand = 0;
-    //playerturn
-    cout << "It is your turn!" << endl;
-    while (playing){
-        displayGameState();
-        char option;
-        cout << "Currently playing Hand " + to_string(currentHand+1) << endl;
-        //same card, allow split
-        if ((m_hand[currentHand].getCard(0).getValue() == m_hand[currentHand].getCard(1).getValue())){
-            cout << "Would you like to [H]it, [S]tand, or Split [P]airs?" << endl;
-            allowSplit = true;
-        }
-        //blackjack
-        else if (((m_hand[currentHand].decksize() == 2) && (getValueOfDeck(m_hand[currentHand]) == 21)) || ((dealer_hand.decksize() == 2) && (getValueOfDeck(dealer_hand) == 21))){
-            cin.ignore();
-            enterContinue();
-            cout << "Blackjack!" << endl;
-            maxValue = getValueOfDeck(m_hand[currentHand]);
-            cout << "The dealer's cards were : ";
-            showDeck(dealer_hand);
-            cout << "(" + to_string(getValueOfDeck(dealer_hand)) + ")." << endl;
-            decideWinner();
-            return;
-        }
-        else
-            cout << "Would you like to [H]it or [S]tand?" << endl;
-        cin >> option;
-        //#######TODO: split Aces
-        if ((option == 'H') || option == 'h'){
-            cout << "Hit!" << endl;
-            m_deck.dealCard(m_hand[currentHand]);
-            //bust
-            if (getValueOfDeck(m_hand[currentHand]) > 21){
-                displayGameState();
-                cout << "Your value (" + to_string(getValueOfDeck(m_hand[currentHand])) + ") is a bust. Unfortunately, you've lost this hand." << endl;
-                currentHand += 1;
-                //only one hand
-                if ((numHands == 1) && (currentHand == numHands)){
-                    cout << "All your hands are bust. You lost this round." << endl;
-                    cout << "The dealer's cards were : ";
-                    showDeck(dealer_hand);
-                    cout << "(" + to_string(getValueOfDeck(dealer_hand)) + ")." << endl;
-                    return;
-                }
-                //multiple hands all bust
-                else if ((currentHand == numHands) && (maxValue > 21)){
-                    cout << "All your hands are bust. You have lost this round." << endl;
-                    cout << "The dealer's cards were : ";
-                    showDeck(dealer_hand);
-                    cout << "(" + to_string(getValueOfDeck(dealer_hand)) + ")." << endl;
-                    return;
-                }
-                //bust and no previous legal hands
-                else if (maxValue == 0)
-                    maxValue = getValueOfDeck(m_hand[currentHand-1]);
+    bool gameOn = true;
+    while (gameOn){
+        startgame();
+        bool playing = true;
+        bool allowSplit = false;
+        bool specialCase = false;
+        bool dealer_turn = false;
+        string filler;
+        int currentHand = 0;
+        //playerturn
+        cout << "It is your turn!" << endl;
+        while (playing){
+            displayGameState();
+            char option;
+            cout << "\nCurrently playing Hand " + to_string(currentHand+1) << endl;
+            //same card, allow split
+            if ((m_hand[currentHand].getCard(0).getValue() == m_hand[currentHand].getCard(1).getValue())){
+                cout << "Would you like to [H]it, [S]tand, or Split [P]airs?" << endl;
+                allowSplit = true;
             }
-        }
-        else if ((option == 'S') || (option == 's')){
-            cout << "Stand! Your final value for this hand is " + to_string(getValueOfDeck(m_hand[currentHand])) << endl;
-            if ((getValueOfDeck(m_hand[currentHand]) > maxValue) || maxValue > 21)
+            //blackjack
+            else if (((m_hand[currentHand].decksize() == 2) && (getValueOfDeck(m_hand[currentHand]) == 21)) || ((dealer_hand.decksize() == 2) && (getValueOfDeck(dealer_hand) == 21))){
+                cin.ignore();
+                enterContinue();
+                cout << "Blackjack!" << endl;
                 maxValue = getValueOfDeck(m_hand[currentHand]);
-            currentHand += 1;
-            if (currentHand == numHands){
+                cout << "The dealer's cards were : ";
+                showDeck(dealer_hand);
+                cout << "(" + to_string(getValueOfDeck(dealer_hand)) + ")." << endl;
+                decideWinner();
+                specialCase = true;
                 playing = false;
             }
-        }
-        else if ((option == 'P') || (option == 'p')){
-            if (allowSplit == true){
-                m_hand[numHands].insert_card(m_hand[currentHand].remove_card(1));
-                m_deck.dealCard(m_hand[currentHand]);
-                m_deck.dealCard(m_hand[numHands]);
-                updateMaxValue();
-                numHands++;
-                if (m_hand[currentHand].getCard(0).getValue() == 1){
-                    displayGameState();
-                    cout << "You have split Aces!" << endl;
-                    playing = false;
+            else
+                cout << "Would you like to [H]it or [S]tand?" << endl;
+            
+            if (playing){
+                cin >> option;
+                if ((option == 'H') || option == 'h'){
+                    cout << "Hit!" << endl;
+                    m_deck.dealCard(m_hand[currentHand]);
+                    //bust
+                    if (getValueOfDeck(m_hand[currentHand]) > 21){
+                        displayGameState();
+                        cout << "Your value (" + to_string(getValueOfDeck(m_hand[currentHand])) + ") is a bust. Unfortunately, you've lost this hand." << endl;
+                        currentHand += 1;
+                        //only one hand
+                        if ((numHands == 1) && (currentHand == numHands)){
+                            cout << "All your hands are bust. You lost this round." << endl;
+                            cout << "The dealer's cards were : ";
+                            showDeck(dealer_hand);
+                            cout << "(" + to_string(getValueOfDeck(dealer_hand)) + ")." << endl;
+                            specialCase = true;
+                            playing = false;
+                        }
+                        //multiple hands all bust
+                        else if ((currentHand == numHands) && (maxValue > 21)){
+                            cout << "All your hands are bust. You have lost this round." << endl;
+                            cout << "The dealer's cards were : ";
+                            showDeck(dealer_hand);
+                            cout << "(" + to_string(getValueOfDeck(dealer_hand)) + ")." << endl;
+                            specialCase = true;
+                            playing = false;
+                        }
+                        //bust and no previous legal hands
+                        else if (maxValue == 0)
+                            maxValue = getValueOfDeck(m_hand[currentHand-1]);
+                    }
+                }
+                else if ((option == 'S') || (option == 's')){
+                    cout << "Stand! Your final value for this hand is " + to_string(getValueOfDeck(m_hand[currentHand])) << endl;
+                    if ((getValueOfDeck(m_hand[currentHand]) > maxValue) || maxValue > 21)
+                        maxValue = getValueOfDeck(m_hand[currentHand]);
+                    currentHand += 1;
+                    if (currentHand == numHands){
+                        playing = false;
+                        dealer_turn = true;
+                    }
+                }
+                else if ((option == 'P') || (option == 'p')){
+                    if (allowSplit == true){
+                        m_hand[numHands].insert_card(m_hand[currentHand].remove_card(1));
+                        m_deck.dealCard(m_hand[currentHand]);
+                        m_deck.dealCard(m_hand[numHands]);
+                        numHands++;
+                        if (m_hand[currentHand].getCard(0).getValue() == 1){
+                            displayGameState();
+                            cout << "You have split Aces!" << endl;
+                            playing = false;
+                            dealer_turn = true;
+                        }
+                    }
+                    allowSplit = false;
                 }
             }
-            allowSplit = false;
         }
-    }
-    
-    playing = true;
-    //dealerturn
-    cout << "\nIt is now the dealer's turn! We will proceed card by card." << endl;
-    cin.ignore();
-    while (playing){
-        displayGameState2();
-        if (getValueOfDeck(dealer_hand) < 17){
-            m_deck.dealCard(dealer_hand);
-            enterContinue();
-            if (getValueOfDeck(dealer_hand) > 21){
-                displayGameState2();
+        
+        //dealerturn
+        if (dealer_turn){
+            cout << "\nIt is now the dealer's turn! We will proceed card by card." << endl;
+            cin.ignore();
+        }
+        while (dealer_turn){
+            displayGameState2();
+            if (getValueOfDeck(dealer_hand) < 17){
+                m_deck.dealCard(dealer_hand);
                 enterContinue();
-                cout << "The dealer has bust. You have won!" << endl;
-                return;
+                if (getValueOfDeck(dealer_hand) > 21){
+                    displayGameState2();
+                    enterContinue();
+                    cout << "The dealer has bust. You have won!" << endl;
+                    specialCase = true;
+                }
             }
+            else
+                dealer_turn = false;
         }
-        else
-            playing = false;
+        
+        if (!specialCase){
+            enterContinue();
+            decideWinner();
+        }
+        
+        cout << "Would you like to continue playing Blackjack?" << endl;
+        cout << "[Y]es" << endl << "[N]o" << endl;
+        string continueGame;
+        while ((continueGame != "Y") && (continueGame != "y") && (continueGame != "N") && (continueGame != "n")){
+            cin >> continueGame;
+            if ((continueGame == "N") || (continueGame == "n"))
+                gameOn = false;
+            else if ((continueGame == "Y") || (continueGame == "y"))
+                clearHands();
+            else
+                cout << "Your choice was not recognized. Please try again." << endl;
+        }
     }
-    enterContinue();
-    decideWinner();
 }

@@ -16,7 +16,7 @@
 class Blackjack{
 public:
     Blackjack();
-    void startgame();
+    void playgame();
     
 private:
     void createStartingDeck();
@@ -28,8 +28,10 @@ private:
     void decideWinner();
     
     void updateMaxValue();
+    void clearHands();
     
-    void playgame();
+    void startgame();
+    
     int numHands = 1;
     int maxValue = 0;
     Deck<PlayingCard> m_deck;
