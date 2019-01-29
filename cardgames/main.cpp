@@ -51,7 +51,7 @@ int main(int argc, const char * argv[]) {
         cout << "[1]Blackjack" << endl;
         cout << "[2]Exit" << endl;
         string option = "";
-        cin >> option;
+        getline(cin, option);
         try{
         if (playgame(stoi(option)) == 0)
             playing = false;
