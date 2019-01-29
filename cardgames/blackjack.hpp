@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include "playingcard.hpp"
 #include "deck.cpp"
+#include <sstream>
 
 class Blackjack{
 public:
@@ -34,6 +35,8 @@ private:
     
     int numHands = 1;
     int maxValue = 0;
+    int m_money = 0;
+    int currentBet = 0;
     Deck<PlayingCard> m_deck;
     Deck<PlayingCard> m_hand[4];
     Deck<PlayingCard> dealer_hand;

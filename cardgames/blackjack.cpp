@@ -81,7 +81,21 @@ void Blackjack::startgame(){
     //standard 52 card playing deck
     clearHands();
     createStartingDeck();
-    cout << "Hello! You have chosen Blackjack. Let's get started." << endl;
+    cout << "You currently own $" << m_money << endl;
+    cout << "How much would you like to place as a starting bet?" << endl;
+    string betInput;
+    getline(cin, betInput);
+    currentBet = stoi(betInput);
+    while ((currentBet < 0) || (currentBet > m_money)){
+        if (currentBet < 0)
+            cout << "The bet cannot be a negative value. Please enter another bet." << endl;
+        else if (currentBet > m_money)
+            cout << "The bet is greater than the amount you have. Please enter another bet." << endl;
+        getline(cin, betInput);
+        currentBet = stoi(betInput);
+    }
+    m_money -= currentBet;
+    cout << "You have bet $" << currentBet << ". Your money is now $" << m_money << endl;
     dealStartingHand();
 }
 
@@ -119,11 +133,20 @@ void enterContinue(){
 void Blackjack::decideWinner(){
     updateMaxValue();
     if (maxValue > getValueOfDeck(dealer_hand))
+    {
         cout << "Your value (" + to_string(maxValue) << ") is greater than the dealer's (" + to_string(getValueOfDeck(dealer_hand)) << "). You win!" << endl;
-    else if (getValueOfDeck(dealer_hand) > maxValue)
+        m_money += currentBet * 2;
+        cout << "Your money is now $" << m_money << endl;
+    }
+    else if (getValueOfDeck(dealer_hand) > maxValue){
         cout << "Your value (" + to_string(maxValue) << ") is less than the dealer's (" + to_string(getValueOfDeck(dealer_hand)) << "). Unfortunately, you've lost this round." << endl;
-    else
+        cout << "Your money is now $" << m_money << endl;
+    }
+    else{
         cout << "Your value and the dealer's are both " + to_string(maxValue) + ". You tied!" << endl;
+        m_money += currentBet;
+        cout << "Your money is now $" << m_money << endl;
+    }
     
 }
 
@@ -146,6 +169,11 @@ void Blackjack::clearHands(){
 
 void Blackjack::playgame(){
     bool gameOn = true;
+    string getMoney;
+    cout << "Hello! You have chosen Blackjack. Let's get started." << endl;
+    cout << "How much money would you like to start with?" << endl;
+    getline(cin, getMoney);
+    m_money = stoi(getMoney);
     while (gameOn){
         startgame();
         bool playing = true;
@@ -158,7 +186,7 @@ void Blackjack::playgame(){
         cout << "It is your turn!" << endl;
         while (playing){
             displayGameState();
-            char option;
+            string optionC;
             cout << "\nCurrently playing Hand " + to_string(currentHand+1) << endl;
             //same card, allow split
             if ((m_hand[currentHand].getCard(0).getValue() == m_hand[currentHand].getCard(1).getValue())){
@@ -167,7 +195,6 @@ void Blackjack::playgame(){
             }
             //blackjack
             else if (((m_hand[currentHand].decksize() == 2) && (getValueOfDeck(m_hand[currentHand]) == 21)) || ((dealer_hand.decksize() == 2) && (getValueOfDeck(dealer_hand) == 21))){
-                cin.ignore();
                 enterContinue();
                 cout << "Blackjack!" << endl;
                 maxValue = getValueOfDeck(m_hand[currentHand]);
@@ -182,7 +209,8 @@ void Blackjack::playgame(){
                 cout << "Would you like to [H]it or [S]tand?" << endl;
             
             if (playing){
-                cin >> option;
+                getline(cin, optionC);
+                char option = optionC[0];
                 if ((option == 'H') || option == 'h'){
                     cout << "Hit!" << endl;
                     m_deck.dealCard(m_hand[currentHand]);
@@ -197,16 +225,23 @@ void Blackjack::playgame(){
                             cout << "The dealer's cards were : ";
                             showDeck(dealer_hand);
                             cout << "(" + to_string(getValueOfDeck(dealer_hand)) + ")." << endl;
+                            cout << "Your money is now $" << m_money << endl;
                             specialCase = true;
                             playing = false;
                         }
-                        //multiple hands all bust
-                        else if ((currentHand == numHands) && (maxValue > 21)){
-                            cout << "All your hands are bust. You have lost this round." << endl;
-                            cout << "The dealer's cards were : ";
-                            showDeck(dealer_hand);
-                            cout << "(" + to_string(getValueOfDeck(dealer_hand)) + ")." << endl;
-                            specialCase = true;
+                        //multiple hands
+                        else if (currentHand == numHands){
+                            //multiple hands all bust
+                            if (maxValue > 21){
+                                cout << "All your hands are bust. You have lost this round." << endl;
+                                cout << "The dealer's cards were : ";
+                                showDeck(dealer_hand);
+                                cout << "(" + to_string(getValueOfDeck(dealer_hand)) + ")." << endl;
+                                cout << "Your money is now $" << m_money << endl;
+                                specialCase = true;
+                                playing = false;
+                            }
+                            //not all bust, previously legal hand
                             playing = false;
                         }
                         //bust and no previous legal hands
@@ -245,7 +280,6 @@ void Blackjack::playgame(){
         //dealerturn
         if (dealer_turn){
             cout << "\nIt is now the dealer's turn! We will proceed card by card." << endl;
-            cin.ignore();
         }
         while (dealer_turn){
             displayGameState2();
@@ -256,6 +290,8 @@ void Blackjack::playgame(){
                     displayGameState2();
                     enterContinue();
                     cout << "The dealer has bust. You have won!" << endl;
+                    m_money += (currentBet * 2);
+                    cout << "Your money is now $" << m_money << endl;
                     specialCase = true;
                 }
             }
@@ -272,7 +308,7 @@ void Blackjack::playgame(){
         cout << "[Y]es" << endl << "[N]o" << endl;
         string continueGame;
         while ((continueGame != "Y") && (continueGame != "y") && (continueGame != "N") && (continueGame != "n")){
-            cin >> continueGame;
+            getline(cin, continueGame);
             if ((continueGame == "N") || (continueGame == "n"))
                 gameOn = false;
             else if ((continueGame == "Y") || (continueGame == "y"))
