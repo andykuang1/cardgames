@@ -212,7 +212,10 @@ void Blackjack::playgame(){
         bool allowSplit = false;
         bool specialCase = false;
         bool dealer_turn = false;
-        bool startingblackjack = ((getValueOfDeck(m_hand[0]) == 21) || (getValueOfDeck(dealer_hand) == 21));
+        bool insurance = false;
+        int sidebet = 0;
+        bool dealerblackjack = (getValueOfDeck(dealer_hand) == 21);
+        bool startingblackjack = ((getValueOfDeck(m_hand[0]) == 21) || dealerblackjack);
         string filler;
         int currentHand = 0;
         //playerturn
@@ -220,6 +223,32 @@ void Blackjack::playgame(){
         while (playing){
             displayGameState();
             string optionC;
+            //insurance
+            if (dealer_hand.getCard(1).getValue() == 1){
+                cout << "How much would you like to side bet for insurance? (0 for no bet)" << endl;
+                bool falseinput = true;
+                while (falseinput){
+                    getline(cin, optionC);
+                    try {
+                        sidebet = stoi(optionC);
+                        falseinput = false;
+                    }
+                    catch (invalid_argument){
+                        cout << "You cannot have a non-integer bet. Please try again." << endl;
+                        falseinput = true;
+                    }
+                }
+                m_money -= sidebet;
+                if (sidebet != 0){
+                    cout << "You have bet $" << sidebet << " as a sidebet. Your money is now $" << m_money << endl;
+                    if (dealer_hand.getCard(0).getValue() > 10)
+                        insurance = true;
+                    else{
+                        enterContinue();
+                        cout << "Your insurance has not paid off. You have $" << m_money << endl;
+                    }
+                }
+            }
             
             //blackjack
             if (startingblackjack){
@@ -229,6 +258,11 @@ void Blackjack::playgame(){
                 cout << "The dealer's cards were : ";
                 showDeck(dealer_hand);
                 cout << "(" + to_string(getValueOfDeck(dealer_hand)) + ")." << endl;
+                if (insurance){
+                    m_money += sidebet * 4;
+                    cout << "Your insurance has earned you $" << sidebet * 4 << "." << endl;
+                    cout << "You now have $" << m_money << "." << endl;
+                }
                 decideWinnerBlackjack();
                 specialCase = true;
                 playing = false;
