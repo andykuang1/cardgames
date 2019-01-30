@@ -27,6 +27,7 @@ private:
     //after dealer reveal
     void displayGameState2();
     void decideWinner();
+    void decideWinnerBlackjack();
     
     void updateMaxValue();
     void clearHands();
@@ -37,6 +38,7 @@ private:
     int maxValue = 0;
     int m_money = 0;
     int currentBet = 0;
+    bool doubledown = false;
     Deck<PlayingCard> m_deck;
     Deck<PlayingCard> m_hand[4];
     Deck<PlayingCard> dealer_hand;
