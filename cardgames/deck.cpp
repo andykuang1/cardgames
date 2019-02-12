@@ -24,7 +24,7 @@ T Deck<T>::getTop(){
 
 template<class T>
 void Deck<T>::shuffle(){
-    unsigned seed = chrono::system_clock::now().time_since_epoch().count();
+    unsigned seed = (unsigned)chrono::system_clock::now().time_since_epoch().count();
     std::shuffle(m_deck.begin(), m_deck.end(), default_random_engine(seed));
 }
 
@@ -35,7 +35,7 @@ void Deck<T>::insert_card(T cardToInsert){
 
 template<class T>
 int Deck<T>::decksize(){
-    return m_deck.size();
+    return (int)m_deck.size();
 }
 
 template<class T>
