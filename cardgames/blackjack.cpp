@@ -82,17 +82,37 @@ void Blackjack::startgame(){
     clearHands();
     createStartingDeck();
     doubledown = false;
+    bool falseinput = true;
     cout << "You currently own $" << m_money << endl;
     while (m_money == 0){
         string getMoney;
         cout << "You cannot play with $0. How much money would you like to buy in?" << endl;
-        getline(cin, getMoney);
-        m_money = stoi(getMoney);
+        while (falseinput){
+            try {
+                getline(cin, getMoney);
+                m_money = stoi(getMoney);
+                falseinput = false;
+            }
+            catch (invalid_argument){
+                cout << "You cannot have a non-integer bet. Please try again." << endl;
+                falseinput = true;
+            }
+        }
     }
     cout << "How much would you like to place as a starting bet?" << endl;
     string betInput;
-    getline(cin, betInput);
-    currentBet = stoi(betInput);
+    while (falseinput){
+        getline(cin, betInput);
+        try {
+            currentBet = stoi(betInput);
+            falseinput = false;
+        }
+        catch (invalid_argument){
+            cout << "You cannot have a non-integer bet. Please try again." << endl;
+            falseinput = true;
+        }
+    }
+    
     while ((currentBet < 0) || (currentBet > m_money)){
         if (currentBet < 0)
             cout << "The bet cannot be a negative value. Please enter another bet." << endl;
@@ -201,11 +221,22 @@ void Blackjack::clearHands(){
 
 void Blackjack::playgame(){
     bool gameOn = true;
+    bool falseinput = true;
     string getMoney;
     cout << "Hello! You have chosen Blackjack. Let's get started." << endl;
     cout << "How much money would you like to start with?" << endl;
-    getline(cin, getMoney);
-    m_money = stoi(getMoney);
+
+    while (falseinput){
+        try {
+            getline(cin, getMoney);
+            m_money = stoi(getMoney);
+            falseinput = false;
+        }
+        catch (invalid_argument) {
+            cout << "You cannot have a non-integer amount. Please try again." << endl;
+            falseinput = true;
+        }
+    }
     while (gameOn){
         startgame();
         bool playing = true;
@@ -225,8 +256,8 @@ void Blackjack::playgame(){
             string optionC;
             //insurance
             if (dealer_hand.getCard(1).getValue() == 1){
-                cout << "How much would you like to side bet for insurance? (0 for no bet)" << endl;
-                bool falseinput = true;
+                cout << "How much would you like to side bet for insurance? (Up to half your current bet of $" << currentBet << ") (0 for no bet)" << endl;
+                falseinput = true;
                 while (falseinput){
                     getline(cin, optionC);
                     try {
@@ -235,6 +266,10 @@ void Blackjack::playgame(){
                     }
                     catch (invalid_argument){
                         cout << "You cannot have a non-integer bet. Please try again." << endl;
+                        falseinput = true;
+                    }
+                    if (sidebet > (currentBet/2)){
+                        cout << "You cannot bet more than half the current bet." << endl;
                         falseinput = true;
                     }
                 }
