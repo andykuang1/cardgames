@@ -393,13 +393,14 @@ void Blackjack::playgame(){
                     allowSplit = false;
                 }
                 //double down
-                else if ((option == 'D') || (option == 'd')){
+                else if (((option == 'D') || (option == 'd')) && doubledown == true){
                     m_money -= currentBet;
                     cout << "You have put in another $" << currentBet << " to double down. You now have $" << m_money << endl;
                     currentBet *= 2;
                     m_deck.dealCard(m_hand[currentHand]);
                     playing = false;
                     dealer_turn = true;
+                    doubledown = false;
                 }
             }
         }
